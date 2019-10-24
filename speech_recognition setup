@@ -1,0 +1,18 @@
+To set up google cloud based speech recognition with customized set of keywords:
+1. go to https://pypi.org/project/SpeechRecognition/ and install the speech_recognition python module.
+  along side pyaudio 2 and the other required python libraries
+  
+
+2. Enter sudo pip install --ignore-installed google-api-python-client   to install google_cloud client. 
+   You'd need it to send preferred dictionary of words to google.
+    
+   
+2b. Set up a google cloud account and download your .json permissions file. Set the environment variable
+  GOOGLE_APPLICATION_CREDENTIALS to the location of this file.
+   
+3. Go to /usr/local/lib/python2.7/dist-packages/speech_recognition and open the __init__.py file
+
+4. Search for the phrase "SpeechContext" and change it to "SpeechContexts".
+
+5. Save it and voila, you can run the example scripts on the speech_recognition library website to
+   use google's service to perform speech recognition
